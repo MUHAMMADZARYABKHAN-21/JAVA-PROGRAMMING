@@ -1,20 +1,27 @@
 public class exception{
 
 
+    public static void main(String[] args) {
+        String name;
+        int  marks;
 
-    public static void main(string{},args){
-        try{
-        int x =10;
-        int y=0;
-        int z=x/y;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the name of the student:");
+        name=sc.nextline();
+        System.out.println("Enter the marks of the student:");
+
+        marks=sc.nextInt();
+        try {            validateMarks(marks);
+            System.out.println("Name: " + name);
+            System.out.println("Marks: " + marks);
+        } catch (InvalidMarksException e) {
+            System.out.println("Error: " + e.getMessage());
         }
-        catch{ArithmeticException e}{
-            System.out.print{"can not divide by zero"};
 
-
+    }
+    static void validateMarks(int marks) throws InvalidMarksException{
+        if(marks<0 || marks>100){
+            throw new InvalidMarksException("Marks should be between 0 and 100");
         }
-
-        
-        
     }
 }
