@@ -27,6 +27,10 @@ for(int i=0;i<x.length;i++){
 for (int i=0;i<x.length;i++){
     System.out.println("the value for x is  "+i+"is"+x[i]);
 
+    
+
 }
     }
 }
+
+
