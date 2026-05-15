@@ -4,7 +4,21 @@ public class Exceptionl {
         public invalidexception(String message){
             super(message);
         }
-    }
+
+
+        static class checkaverage extends Exception{
+
+            public checkaverage( String message){
+                super(message);
+            }
+            } 
+            
+            
+        }
+
+
+
+    
 
     public static void main(String[] args){
         try {
@@ -20,4 +34,12 @@ public class Exceptionl {
             throw new invalidexception("marks should be between 0 and 100");
         }
     }
+
+
+    static void checkaverage(double average) throws checkaverage{
+        if(average <40){
+            throw new checkaverage("average is less than 40")
+        }
+    }
+
 }
